@@ -1,7 +1,7 @@
 # Android_Image_Manage_Util 
 This is a Util project for manage image and also solve OOM problems.
 
-[點這邊有中文版喔](#中文版)
+[中文版](#中文版)
 
 ## Description
 

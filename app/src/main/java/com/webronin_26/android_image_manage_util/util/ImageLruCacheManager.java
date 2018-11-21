@@ -295,7 +295,11 @@ public class ImageLruCacheManager {
 
             byte[] targetByteArray = new byte[ targetSize ];
 
-            mInputStream.read( targetByteArray );
+            for( int index = 0; index < targetSize; index++ ){
+
+                targetByteArray[ index ] = (byte) mInputStream.read();
+
+            }
 
             bitmap = new BitmapManageHelper().decodeFromByteArray( targetByteArray , targetHeight, targetWidth );
 
@@ -342,5 +346,3 @@ public class ImageLruCacheManager {
     }
 
 }
-
-

@@ -64,7 +64,6 @@ you should define ViewHolder by your own situation.
 ## Unsolve problem
 
 1. gridview cells overlapping.
-2. Image sometimes can't show completely.
 
 ---
 
@@ -138,4 +137,3 @@ getImage( String urlOfImage , ViewHolder CurrentViewHolder , int position );
 ## 未解決問題
 
 1. ImageView 重疊 / 錯位問題
-2. 圖片顯示不完全

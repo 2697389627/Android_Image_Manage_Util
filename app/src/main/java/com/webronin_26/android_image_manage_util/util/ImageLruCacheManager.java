@@ -143,8 +143,6 @@ public class ImageLruCacheManager {
 
                     new SetImageView( bitmap , mViewHolder , position );
 
-                    putInLruCache( httpUrlHashKey , bitmap );
-
                 }else {
 
                     bitmap = getInDiskLruCache( httpUrlHashKey );
@@ -152,8 +150,6 @@ public class ImageLruCacheManager {
                     if( bitmap != null ){
 
                         new SetImageView( bitmap , mViewHolder , position );
-
-                        putInLruCache( httpUrlHashKey , bitmap );
 
                     } else {
 

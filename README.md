@@ -17,7 +17,6 @@ bitmap = getInLruCache( httpUrlHashKey );  // get Bitmap object from LruCache
 if( bitmap != null ) {
 
     new SetImageView( bitmap , mViewHolder , position ); // if Bitmap is not null , set on ImageView
-    putInLruCache( httpUrlHashKey , bitmap ); // put this object on the top of Lru queue
 
 }else {
 
@@ -26,7 +25,6 @@ if( bitmap != null ) {
     if( bitmap != null ){
 
         new SetImageView( bitmap , mViewHolder , position ); // if Bitmap is not null , set on ImageView
-        putInLruCache( httpUrlHashKey , bitmap ); // put this object on the top of Lru queue
 
     } else {
     

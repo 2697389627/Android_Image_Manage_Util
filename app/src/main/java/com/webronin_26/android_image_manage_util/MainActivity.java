@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             , "https://i.imgur.com/vPowIJg.jpg"
             , "https://i.imgur.com/2dM8Lrm.jpg"
             , "https://i.imgur.com/WAj8TGI.jpg"
-            , "https://i.imgur.com/gZsVk8z.jpg"
             , "https://i.imgur.com/oaZSIBt.jpg"
             , "https://i.imgur.com/pc1MsWc.jpg"
             , "https://i.imgur.com/PT2n6Bk.jpg"

@@ -17,13 +17,7 @@ public class BitmapManageHelper implements BaseBitmapManageHelper {
 
         BitmapFactory.decodeResource( res, R_id, options );
 
-        if ( mBitmapCalculateSize == null ) {
-
-            mBitmapCalculateSize = new BitmapCalculateSize();
-
-        }
-
-        options.inSampleSize = mBitmapCalculateSize.BitmapCalculateSize(options, height, width);
+        options.inSampleSize = new BitmapCalculateSize().BitmapCalculateSize(options, height, width);
 
         options.inJustDecodeBounds = false;
 
@@ -41,15 +35,7 @@ public class BitmapManageHelper implements BaseBitmapManageHelper {
 
         BitmapFactory.decodeFile(file_path, options);
 
-
-        if (mBitmapCalculateSize == null) {
-
-            mBitmapCalculateSize = new BitmapCalculateSize();
-
-        }
-
-        options.inSampleSize = mBitmapCalculateSize.BitmapCalculateSize(options, height, width);
-
+        options.inSampleSize = new BitmapCalculateSize().BitmapCalculateSize(options, height, width);
 
         options.inJustDecodeBounds = false;
 
@@ -66,14 +52,7 @@ public class BitmapManageHelper implements BaseBitmapManageHelper {
 
         BitmapFactory.decodeByteArray(array, 0, array.length, options);
 
-        if (mBitmapCalculateSize == null) {
-
-            mBitmapCalculateSize = new BitmapCalculateSize();
-
-        }
-
-        options.inSampleSize = mBitmapCalculateSize.BitmapCalculateSize(options, height, width);
-
+        options.inSampleSize = new BitmapCalculateSize().BitmapCalculateSize(options, height, width);
 
         options.inJustDecodeBounds = false;
 

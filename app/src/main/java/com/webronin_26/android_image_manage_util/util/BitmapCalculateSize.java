@@ -5,55 +5,38 @@ import android.graphics.BitmapFactory;
 
 public class BitmapCalculateSize {
 
-    private int resHeight = 0;
+    private int resHeight , resWidth , targetHeight , targetWidth , sampleSize;
 
-    private int resWidth = 0;
-
-    private int targetHeight = 0;
-
-    private int targetWidth = 0;
-
-    private int sampleSize = 1;
-
-    public void init(){
+    public BitmapCalculateSize(){
 
         resHeight = 0;
-
         resWidth = 0;
-
         targetHeight = 0;
-
         targetWidth = 0;
-
         sampleSize = 1;
 
     }
 
-    public int BitmapCalculateSize( BitmapFactory.Options options , int target_height , int target_width ){
-
-        init();
+    public int BitmapCalculateSize( BitmapFactory.Options options , int target_height , int target_width ) {
 
         resHeight = options.outHeight;
-
         resWidth = options.outWidth;
 
         this.targetHeight = target_height;
-
         this.targetWidth = target_width;
 
-        calculate( options );
+        calculate();
 
         return sampleSize;
 
     }
 
 
-    public void calculate( BitmapFactory.Options options ){
+    private void calculate() {
 
         if( resHeight > targetHeight || resWidth > targetWidth ){
 
             int half_res_height = resHeight / 2;
-
             int half_res_width = resWidth / 2;
 
             while( ( half_res_height / sampleSize ) >= targetHeight &&

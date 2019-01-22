@@ -61,7 +61,15 @@ you should define ViewHolder by your own situation.
 
 ## Unsolve problem
 
+The example just a prototype of solving image-cache problems.
+Still,there's always things that can be improve.Such as :
+
 1. gridview cells overlapping.
+2. Use ThreadPoolExecutor class to manage the Thread.
+3. More effective to manage the thread and imageView from each item-View.  
+   when we scroll from ListView/GridView/RecyclerView , we can add a flag 
+   when we scroll like 10 item , and user stil want to scroll down
+   we release some bitmap resource or some resource that other Thread is using.
 
 ---
 
@@ -134,4 +142,11 @@ getImage( String urlOfImage , ViewHolder CurrentViewHolder , int position );
 
 ## 未解決問題
 
-1. ImageView 重疊 / 錯位問題
+專案內的使用範例只是一個最基本的使用原型而已。
+我們還可以在某些地方加強邏輯：
+
+1. ImageView 重疊 / 錯位問題。
+2. 使用 ThreadPoolExecutor 來管理線程的創造和使用。
+3. 更有效的控管線程和每一個 imageView。
+   可以設計比如使用 ListView/GridView/RecyclerView 滑動到每第十個物件時
+   就釋放前面的 bitmap 資源或是 線程資源之類的。

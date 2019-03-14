@@ -6,21 +6,15 @@ import android.os.AsyncTask;
 public class SetImageView extends AsyncTask<Void , Void , Void> {
 
     private Bitmap mBitmap = null;
-
     private ViewHolder mViewHolder = null;
-
     private int position = 0;
 
     public SetImageView( Bitmap bitmap , ViewHolder viewHolder , int Position ) {
 
         mBitmap = bitmap;
-
         mViewHolder = viewHolder;
-
         position = Position;
-
         this.execute();
-
     }
 
     @Override
@@ -34,14 +28,9 @@ public class SetImageView extends AsyncTask<Void , Void , Void> {
         super.onPostExecute(aVoid);
 
         if ( GridViewAdapter.viewHolderItemMap.get( mViewHolder ) != position ) {
-
             // do nothing
-
         } else {
-
             mViewHolder.mImageView.setImageBitmap( mBitmap );
-
         }
-
     }
 }

@@ -12,53 +12,35 @@ public class BitmapManageHelper implements BaseBitmapManageHelper {
     public Bitmap decodeFormResource(Resources res, int R_id, int height, int width) {
 
         BitmapFactory.Options options = new BitmapFactory.Options();
-
         options.inJustDecodeBounds = true;
-
         BitmapFactory.decodeResource( res, R_id, options );
-
         options.inSampleSize = new BitmapCalculateSize().BitmapCalculateSize(options, height, width);
-
         options.inJustDecodeBounds = false;
 
         return BitmapFactory.decodeResource(res, R_id, options);
-
     }
-
 
     @Override
     public Bitmap decodeFormFile(String file_path, int height, int width) {
 
         BitmapFactory.Options options = new BitmapFactory.Options();
-
         options.inJustDecodeBounds = true;
-
         BitmapFactory.decodeFile(file_path, options);
-
         options.inSampleSize = new BitmapCalculateSize().BitmapCalculateSize(options, height, width);
-
         options.inJustDecodeBounds = false;
 
         return BitmapFactory.decodeFile(file_path, options);
     }
 
-
     @Override
     public Bitmap decodeFromByteArray(byte[] array, int height, int width) {
 
         BitmapFactory.Options options = new BitmapFactory.Options();
-
         options.inJustDecodeBounds = true;
-
         BitmapFactory.decodeByteArray(array, 0, array.length, options);
-
         options.inSampleSize = new BitmapCalculateSize().BitmapCalculateSize(options, height, width);
-
         options.inJustDecodeBounds = false;
 
         return BitmapFactory.decodeByteArray(array, 0, array.length, options);
-
     }
-
 }
-

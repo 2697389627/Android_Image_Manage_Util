@@ -28,7 +28,6 @@ public class BitmapCalculateSize {
         calculate();
 
         return sampleSize;
-
     }
 
 
@@ -43,11 +42,7 @@ public class BitmapCalculateSize {
                     ( half_res_width / sampleSize ) >= targetWidth ){
 
                 sampleSize *= 2;
-
             }
-
         }
-
     }
-
 }

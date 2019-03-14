@@ -13,9 +13,7 @@ public class MainActivity extends AppCompatActivity {
     GridView mGridView;
 
     private int imageViewWidth = 0;
-
     private int imageViewHeight = 0;
-
     GridViewAdapter mGridViewAdapter = null;
 
     public static String[] imageUrlStringArray = {
@@ -85,37 +83,24 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         ButterKnife.bind(this);
-
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
 
         super.onWindowFocusChanged(hasFocus);
-
-        int row = 2;
-
         int current_width = mGridView.getWidth() - 10;
-
         int current_height = mGridView.getHeight() - 10;
 
         if (hasFocus) {
 
             if ( mGridViewAdapter == null || imageViewHeight != current_height || imageViewWidth != current_width) {
-
                 imageViewWidth = current_width;
-
                 imageViewHeight = current_height;
-
-                mGridViewAdapter = new GridViewAdapter(this, imageViewWidth, imageViewHeight, row );
-
+                mGridViewAdapter = new GridViewAdapter(this, imageViewWidth, imageViewHeight);
                 mGridView.setAdapter( mGridViewAdapter );
-
             }
-
         }
-
     }
 }

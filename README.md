@@ -11,7 +11,6 @@ And the layout use GridView and BaseAdapter.
 The main running logic is
 ```
 Bitmap bitmap = null;
-
 bitmap = getInLruCache( httpUrlHashKey );  // get Bitmap object from LruCache
 
 if( bitmap != null ) {
@@ -90,13 +89,11 @@ layout 上使用 GridView 以及 BaseAdapter
 
 ```
 Bitmap bitmap = null;
-
 bitmap = getInLruCache( httpUrlHashKey );  // 從 LruCache 當中獲取 Bitmap object
 
 if( bitmap != null ) {
 
     new SetImageView( bitmap , mViewHolder , position ); // 如果 Bitmap 不為空，設定在 ImageView上
-    putInLruCache( httpUrlHashKey , bitmap ); // 並且將這個 object 放到 內存列隊的最前方
 
 }else {
 
@@ -105,7 +102,6 @@ if( bitmap != null ) {
     if( bitmap != null ){
 
         new SetImageView( bitmap , mViewHolder , position ); // 如果 Bitmap 不為空，設定在 ImageView上
-        putInLruCache( httpUrlHashKey , bitmap ); // 並且將這個 object 放到 內存列隊的最前方
 
     } else {
     
